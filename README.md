@@ -3,6 +3,8 @@ Olá, devs! 👋
 
 Sejam bem-vindos ao Dev Dados, o seu novo hub para explorar e compartilhar tudo sobre o mundo da tecnologia de forma divertida e interativa! 🚀
 
+[Visite o Dev Dados](https://dev-dados.vercel.app/)
+
 📚 O que você encontra aqui?
 🔍 Página Inicial
 Na nossa página inicial, você pode buscar referências de devs no banco de dados. Precisa de uma inspiração rápida? Veja o que outros devs estão fazendo e descubra novas ideias!
