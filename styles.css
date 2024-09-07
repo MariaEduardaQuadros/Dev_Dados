@@ -1,0 +1,619 @@
+/* Importa a fonte Chakra Petch do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    font-family: "Chakra Petch", sans-serif;
+    background-color: #d3bcf6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estiliza o elemento header */
+header {
+    padding-top: 2rem; /* Ajusta o espaçamento superior do header */
+    padding-bottom: 2rem;
+}
+
+/* Estiliza o elemento nav dentro do header */
+header nav {
+    margin-top: 2rem; /* Ajusta o espaçamento superior do nav */
+}
+
+/* Estiliza os títulos h1 */
+h1 {
+    font-size: 2.5rem;
+    color: #87009e;
+    text-align: center;
+    letter-spacing: 0.4rem;
+    border-right: 2px solid;
+    white-space: nowrap;
+    padding-top: 2rem;
+    overflow: hidden; 
+    width: 0; 
+}
+
+.typing {
+    width: 100%; 
+    animation: typing 2s steps(30, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+/* Estiliza o menu de navegação */
+nav ul {
+    list-style: none; 
+    display: flex; 
+    justify-content: center; 
+    padding: 0;
+    margin: 0;
+}
+
+/* Estiliza os itens da navegação */
+nav ul li {
+    margin: 0 2rem; 
+}
+
+/* Estiliza os links da navegação */
+nav ul li a {
+    text-decoration: none; 
+    color: #222831; 
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem; 
+    border-radius: 1.5rem; 
+    background-color: rgba(255, 255, 255, 0.3); 
+    transition: background-color 0.3s ease; 
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.6); /* Aumenta a transparência ao passar o mouse */
+    color: #30475E; /* Cor do texto no hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efeito de botão */
+}
+
+/* Estiliza as seções da página */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+/* Estiliza os inputs dentro das seções */
+section input {
+    width: 30rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    color: #45474B;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.video-container {
+    position: relative;
+    width: 800px; /* Ajuste a largura conforme necessário */
+    height: 450px; /* Ajuste a altura conforme necessário */
+    background: #000;
+    margin: 1rem auto;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estiliza a caixa de resultados da pesquisa */
+#resultados-pesquisa {
+    display: none; 
+    width: 60rem;
+    height: 46vh;
+    overflow-y: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    background-color: #fafafa;
+}
+
+/* Estiliza cada item de resultado */
+.item-resultado {
+    background: #FFFFFF;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estiliza os títulos dentro dos itens de resultado */
+.item-resultado h2 {
+    font-size: 1.5rem;
+    color: #222831;
+}
+
+/* Estiliza os links dentro dos itens de resultado */
+.item-resultado a {
+    text-decoration: none;
+    color: #30475E;
+}
+
+/* Estiliza os links quando são passados o mouse sobre */
+.item-resultado a:hover {
+    text-decoration: underline;
+}
+
+/* Estiliza a descrição dentro dos itens de resultado */
+.descricao-meta {
+    color: #45474B;
+    margin: 0.5rem 0;
+}
+
+/* Resultados da pesquisa */
+#resultados-pesquisa {
+    margin-top: 20px;
+}
+
+.item-resultado {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.item-resultado h2 {
+    margin: 0;
+}
+
+.item-resultado a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.item-resultado a:hover {
+    text-decoration: underline;
+}
+
+/* Mensagem de erro */
+#mensagem-erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    display: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+#mensagem-erro a {
+    color: #004085;
+    text-decoration: underline;
+}
+
+#mensagem-erro a:hover {
+    text-decoration: none;
+}
+
+/* Estiliza o rodapé da página */
+footer {
+    background-color: #F5F7F8;
+    color: #45474B;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+    }
+
+    section input {
+        width: 25rem;
+        padding: 0.8rem;
+    }
+
+    #resultados-pesquisa {
+        width: 40rem;
+        height: 40vh;
+    }
+
+    .item-resultado h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Responsividade para telas menores que 480px */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+    }
+
+    section input {
+        width: 17rem;
+    }
+
+    section button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    #resultados-pesquisa {
+        width: 90%;
+        height: 50vh;
+    }
+
+    .item-resultado h2 {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Dicas Iniciantes
+
+/* Estiliza a seção do formulário */
+section {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+#dica-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#dica-form label {
+    font-weight: bold;
+}
+
+#dica-form input, #dica-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+#dica-form button {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #30475E;
+    color: #F5F7F8;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#dica-form button:hover {
+    background-color: #9d01ff;
+}
+
+/* Estiliza a seção do livro de dicas */
+.pagina-dica {
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pagina-dica h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #c179eb;
+}
+
+.pagina-dica p {
+    font-size: 1rem;
+    color: #45474B;
+}
+
+/* Estilo para a seção de dicas */
+
+/* Estilo futurista para o título h2 com cores roxo pastel */
+/* Estilo futurista para o título h2 com cores roxo pastel */
+h2 {
+    font-family: 'Chakra Petch', sans-serif; /* Fonte moderna */
+    font-size: 2rem; /* Tamanho da fonte */
+    color: #d3a1d4; /* Cor pastel de roxo */
+    text-shadow: 
+        0 1px 2px rgba(0, 0, 0, 0.4), /* Sombra sutil para profundidade */
+        0 0 10px rgba(200, 150, 255, 0.6), /* Efeito de brilho em roxo pastel */
+        0 0 20px rgba(200, 150, 255, 0.8); /* Destaque adicional */
+    background: linear-gradient(90deg, #d3a1d4, #9b6fc3); /* Gradiente de fundo em roxo pastel */
+    -webkit-background-clip: text; /* Clipa o gradiente ao texto */
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente para o gradiente */
+    background-color: #1a1a1a; /* Cor de fundo do título */
+    text-align: center; /* Centraliza o texto */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transições suaves */
+}
+
+h2:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do texto ao passar o mouse */
+    color: #510d91; /* Cor do texto ao passar o mouse */
+    text-shadow: 
+        0 1px 2px rgba(0, 0, 0, 0.4), 
+        0 0 10px rgba(200, 150, 255, 0.8), 
+        0 0 20px rgba(200, 150, 255, 1); /* Intensifica o brilho ao passar o mouse */
+}
+
+.dicas {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.item-dica {
+    padding: 20px;
+}
+
+.item-dica h3 {
+    margin-top: 0;
+}
+
+.item-dica p {
+    font-size: 1rem;
+}
+
+/* Slick Carousel */
+.slick-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-dots li button:before {
+    color: #c47de8;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #F5F7F8;
+}
+
+/* Contêiner dos botões */
+.botao-container {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.botao-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background-color: #c886eb;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.botao-container button:hover {
+    background-color: #b900ce;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"], textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #5a2d81;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4b1e61;
+}
+
+#livro-dicas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+}
+
+/* Optional: Add styles for small screens */
+@media (max-width: 768px) {
+    .dica {
+        flex: 1 1 calc(50% - 10px); /* Adjust for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .dica {
+        flex: 1 1 100%; /* Adjust for small screens */
+    }
+}
+
+.book {
+    width: 600px;
+    height: 600px;
+    background: #d7c4e4;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.book-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: none;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.page.active {
+    display: block;
+    animation: page-flip 0.6s ease-in-out;
+}
+
+@keyframes page-flip {
+    0% { transform: rotateY(90deg); }
+    100% { transform: rotateY(0deg); }
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #9b6fc3;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow:hover {
+    background-color: #7f56a8;
+}
+
+#prevPage {
+    left: 10px;
+}
+
+#nextPage {
+    right: 10px;
+}
+
+/* Animação de brilho */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #d4b5ff, 0 0 20px #d4b5ff, 0 0 30px #d4b5ff, 0 0 40px #b599ff;
+    }
+    to {
+        text-shadow: 0 0 20px #d4b5ff, 0 0 30px #d4b5ff, 0 0 40px #b599ff, 0 0 80px #a68fff;
+    }
+}
+
+/* Estilo dos quadrados das dicas */
+.dica {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: rgba(200, 150, 255, 0.8); /* Roxo pastel mais opaco */
+    border: 2px solid #d4b5ff;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dica:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #d4b5ff, 0 0 30px #d4b5ff;
+}
+
+.screen {
+    display: none;
+    background-color: #f4f4f4;
+    border: 5px solid #b599ff; /* Roxo pastel mais escuro */
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 0 15px #b599ff;
+}
+
+.screen::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 10px;
+    background-color: #d4b5ff; /* Cor do suporte */
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.screen.ativa {
+    display: block;
+}
+
+.dica-texto h3 {
+    color: #4b0082; /* Roxo escuro */
+}
+
+.dica-texto p {
+    color: #4b0082;
+}

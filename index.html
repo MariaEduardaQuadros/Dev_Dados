@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link para o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <title>TI 💻</title>
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <nav>
+            <ul>
+                <!-- Links de navegação -->
+                <li><a href="como-comecar.html">Como começar na TI</a></li>
+                <li><a href="profissoes-futuro.html">Profissões do Futuro</a></li>
+                <li><a href="dicas-iniciantes.html">Dicas para iniciantes</a></li>
+            </ul>
+            <!-- Título principal -->
+            <h1 id="titulo">Conteúdos de Tecnologia</h1>
+        </nav>
+    </header>
+    <main>
+        <!-- Seção de busca -->
+        <section>
+            <input type="text" id="input-instagram" placeholder="Olá DEV :)    Busque um nome no nosso banco de dados!">
+            <div class="botao-container">
+                <!-- Botões para pesquisa e exibição do banco de dados -->
+                <button onclick="pesquisar()">Exibir Resultados</button>
+                <button onclick="exibirTodos()">Exibir Todo o Banco de Dados</button>
+            </div>
+        </section>
+        <!-- Seção de vídeo -->
+        <section id="video-container">
+            <h3>Assista ao Vídeo</h3>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/30nlBGjPRYM" 
+                    title="Vídeo do YouTube" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+        <!-- Seção para exibir resultados da pesquisa -->
+        <section id="resultados-pesquisa">
+        </section>
+        <!-- Seção para exibir mensagem de erro, se necessário -->
+        <section id="mensagem-erro" style="display: none;">
+            <p>Infelizmente, esse nome não está cadastrado. Mas você pode enviar uma sugestão de nome na aba <a href="dicas-iniciantes.html">Dicas para iniciantes</a>.</p>
+        </section>
+    </main>
+    <!-- Rodapé da página -->
+    <footer>
+        <p>2024 - Conteúdos de TI. Todos os direitos reservados</p>
+        <p>Página para estudos na Imersão Alura</p>
+    </footer>
+    <!-- Scripts JavaScript -->
+    <script src="dados.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

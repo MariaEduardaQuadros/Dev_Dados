@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link para o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Dicas para Iniciantes</title>
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <nav>
+            <ul>
+                <!-- Links de navegação -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="como-comecar.html">Como começar na TI</a></li>
+                <li><a href="profissoes-futuro.html">Profissões do Futuro</a></li>
+            </ul>
+            <!-- Título da página -->
+            <h1 id="titulo">Dicas para Iniciantes</h1>
+        </nav>
+    </header>
+    <main>
+        <!-- Seção para envio de dicas -->
+        <section>
+            <h3>Compartilhe sua Dica</h3>
+            <form id="dica-form">
+                <!-- Campo para o nome do usuário -->
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <!-- Campo para a dica do usuário -->
+                <label for="dica">Sua Dica:</label>
+                <textarea id="dica" name="dica" rows="4" required></textarea>
+                <!-- Botão para enviar a dica -->
+                <button type="submit">Enviar Dica</button>
+            </form>
+        </section>
+        <!-- Seção onde as dicas serão exibidas -->
+        <section id="livro-dicas">
+            <!-- As dicas serão exibidas aqui -->
+        </section>
+    </main>
+    <!-- Rodapé da página -->
+    <footer>
+        <p>2024 - Conteúdos de TI. Todos os direitos reservados</p>
+        <p>Página para estudos na Imersão Alura</p>
+    </footer>
+    <!-- Inclusão do script JavaScript para manipular o envio e exibição das dicas -->
+    <script src="dicas.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
